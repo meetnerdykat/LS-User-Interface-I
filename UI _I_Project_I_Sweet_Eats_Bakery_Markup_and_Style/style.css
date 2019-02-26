@@ -21,22 +21,32 @@ Stretch Task: Pick a navigation item and create a new page with the same header 
 /*======= Create a new universal selector that changes the font color to: #3C373B */
 * {
   color: #3C373B;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+  text-align: center;
 }
 
 h1 {
-  font-family: 'Gaegu', cursive;
-  margin: 20px 0;
+  margin: 30px 0;
   /*=======  Update the font size to 60px and center the text */
   font-size: 60px;
+  font-family: 'Gaegu', cursive;
   text-align: center;
+  font-weight: 900;
+}
+
+h1 a {
+  text-decoration: none;
 }
 
 h2, h3, h4, h5, h6 {
   font-family: 'Gaegu', cursive;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0 10px;
   /*=======  Update the font size to 30px */
   font-size: 30px;
+ 
 }
 
 /*======= Create a selector for ALL p tags in the site to have the following styles:
@@ -67,6 +77,12 @@ img {
   display: flex;
 }
 
+hr {
+  border-style: dashed;
+  border-width: .5px;
+  margin-bottom: 20px;
+}
+
 .content-row div {
   /*======= create a margin propery.  Set the value to 20px */
   margin: 20px;
@@ -95,6 +111,10 @@ img {
 /*======= create a background property and set it to white.  Then create a color property and set it's value to pink. */
 background: white;
 color: pink;
+}
+.container header nav a.active {
+  background: gray;
+  color: white;
 }
 
 /*======= Create a selector for the about section to have the following styles:
@@ -141,6 +161,7 @@ footer .footer-content h3 {
 
 footer nav {
   display: flex;
+  justify-content: center;
 }
 
 /*======= Create a selector for the anchor tag in the footer to have the following styles:
@@ -170,4 +191,76 @@ footer .footer-content .copyright {
   padding: 20px 0;
    /*======= center the text here */
    text-align: center;
+}
+
+/* XSmall devices (landscape phones, 380px - 575px) */
+@media (min-width: 380px) and (max-width: 575px) {
+  .container {
+    margin: 0 auto;
+    width: 370px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 30px 0 0 0;
+    /*=======  Update the font size to 60px and center the text */
+    font-size: 40px;
+    font-family: 'Gaegu', cursive;
+    text-align: center;
+    font-weight: 900;
+  }
+  
+  h1 a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 350px;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: roboto;
+    padding: 5px;
+    line-height: 1.4;
+    /* display: inline-block; */
+  }
+
+  section.about h2 {
+    margin: 30px 0 0 0;
+  }
+
+  .container header nav a.active {
+    background: gray;
+    color: white;
+  }
+
+  .container header nav a {
+    margin: 10px 5px 20px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .content-row {
+    display: inline-block;
+  }
+
+  footer .footer-content { 
+    width: 375px;
+  }
+  
+  footer .footer-content h3 {
+    margin: 20px 15%;
+  }
+
+  footer a {
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+  }
+
+  footer nav a:first-child {
+    margin-left: 10px;
+  }
 }
