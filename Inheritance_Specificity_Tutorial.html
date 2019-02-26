@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inheritance and Specificity Tutorial</title>
+<style>
+/* Universal Wild Card selects EVERYTHING - Least specificty weight */
+* {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  margin: 5px;
+}
+
+/* Element Selector - Overrides Universal Selector */
+a {
+  text-decoration: none;
+}
+
+/* Class Selector - Overrides Universal & Element Selector */
+.main-header {
+  font-size: 24px;
+  color: crimson;
+}
+
+/* Class Selector another example -  Overrides Universal & Element Selector */
+.nav-item {
+  padding: 5px 20px;
+  background: lightgray;
+  border: 1px solid darkgray;
+  margin: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: black;
+}
+
+/* Psuedo Selectors -  */
+.nav-item:hover {
+  background: darkgray;
+}
+
+/* ID Selectors - Overrides Universal, Element, Class */
+#apply {
+  background: crimson;
+  color: white;
+}
+#apply:hover {
+  background: #E50000;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+  <div class="container"> 
+  <header>
+    <h1 class="main-header">Lambda School</h1>
+    <nav>
+      <a class="nav-item" href="#">Tracks</a>
+      <a class="nav-item" href="#">About</a>
+      <a class="nav-item" href="#">Blog</a>
+      <a class="nav-item" id="apply" href="#">Apply Now</a>
+    </nav>
+  </header>
+</div>
+</body>
+</html>

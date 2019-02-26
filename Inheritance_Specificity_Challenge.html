@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inheritance and Specificity Challenge</title>
+<style>
+/* 
+change every name to match the commented color
+- No new HTML
+- No IDs
+- No !important
+*/
+
+.parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+
+.grandchild {
+  color: green;
+}
+
+.greatgrandchild {
+  color: pink;
+}
+
+.greatgrandchild2 {
+  color: purple;
+}
+
+.child2 {
+  color: coral;
+}
+
+.child.child2 > div:nth-child(2) > p {
+  color: aqua;
+}
+
+.child.child2 > div:nth-child(2) > div > p {
+  color: rosybrown;
+}
+
+.child.child2 > div.grandchild.grandchild2 > p {
+  color: sienna;
+}
+
+.child.child2 > div.grandchild.grandchild2 > div > p {
+  color: tomato;
+}
+</style>
+</head>
+
+<body>
+  <div class="parent">
+    <!-- red -->
+    <p>Jane</p>
+    
+    <div class="child">
+      <!-- blue -->
+      <p>Jim</p>
+      
+      <div class="grandchild">
+        <!-- green -->
+        <p>Aaron</p>
+        
+        <div class="greatgrandchild">
+          <!-- pink -->
+          <p>Victoria</p>
+        </div>
+        
+        <div class="greatgrandchild greatgrandchild2">
+           <!-- purple -->
+           <p>Devin</p>
+        </div><!-- grandchild2 -->
+        
+      </div><!-- grandchild -->
+      
+    </div><!-- child -->
+    
+    <div class="child child2">
+      <!-- coral -->
+      <p>Susan</p>
+      
+      <div class="grandchild">
+        <!-- aqua -->
+        <p>George</p>
+        
+        <div class="greatgrandchild">
+          <!-- rosybrown -->
+          <p>Julie</p>
+          
+        </div>
+        
+      </div>
+      
+      <div class="grandchild grandchild2">
+        <!-- sienna -->
+        <p>Nancy</p>
+        
+        <div class="greatgrandchild">
+          <!-- tomato -->
+          <p>Bob</p>
+        </div>
+        
+      </div><!-- grandchild -->
+      
+    </div><!-- child child2 -->
+    
+  </div><!-- parent -->
+</body>
+</html>
